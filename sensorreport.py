@@ -3,6 +3,8 @@ import math
 from datetime import datetime
 
 def calculate_rms_accuracy_with_stats(csv_file):
+    # created with Perplexity 16Apr2025
+    
     """
     Calculates the Root Mean Square (RMS) accuracy, duration, min, max, 3-sigma limits (UCL/LCL)
     of the INA219 bus voltage measurements compared to the Fluke voltage measurements in a CSV file,
