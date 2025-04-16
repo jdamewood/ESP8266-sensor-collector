@@ -40,3 +40,36 @@ It reads bus voltage, Fluke voltage, current, acceleration (X, Y, Z), rotation (
 * It estimates battery capacity.
 
 * It calculates and includes the average, min, and max values for acceleration, rotation, and temperature.
+  ```nalysis Results:
+start_time: 2025-04-16 17:40:44.294000
+end_time: 2025-04-16 19:28:56.395000
+duration: 1:48:12.101000
+rms_accuracy: 0.00793586281562684
+min_error: -0.019847999999999644
+max_error: 0.05315999999999965
+ucl: -0.0010998758516112825
+lcl: -0.014162871848480526
+battery_capacity: 294.7891201388893
+outlier_count: 16
+acc_x_avg: -3.9728553357866603
+acc_x_min: -4.14
+acc_x_max: -3.79
+acc_y_avg: 7.609757359705166
+acc_y_min: 7.4
+acc_y_max: 7.77
+acc_z_avg: 2.8460579576817113
+acc_z_min: 2.61
+acc_z_max: 3.0
+rot_x_avg: -0.09692042318308469
+rot_x_min: -0.15
+rot_x_max: -0.07
+rot_y_avg: 0.039232980680775256
+rot_y_min: -0.03
+rot_y_max: 0.1
+rot_z_avg: -0.013815547378105428
+rot_z_min: -0.12
+rot_z_max: 0.21
+temp_avg: 25.54500344986224
+temp_min: 25.34
+temp_max: 25.85
+```
