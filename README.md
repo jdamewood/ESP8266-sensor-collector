@@ -1,4 +1,4 @@
-Here's a summary of the functions in datacollectionjsonGPIB.py and sensorreport.py suitable for a GitHub repository:
+Here's a summary of the functions in datacollectionjsonGPIB.py and sensorreport.py suitable for a GitHub repository using Perplexity:
 
 datacollectionjsonGPIB.py
 
