@@ -19,6 +19,11 @@ This script collects sensor data from an ESP8266 and a Fluke 8845A multimeter, t
 * fluke_reading_thread(instrument): Continuously reads voltage from the Fluke meter in a separate thread. The readings are placed in a queue for the main thread to process.
 
 * main(): The main function that orchestrates the data collection process. It initializes the GPIB connection, creates the CSV file (if it doesn't exist), starts the Fluke reading thread, fetches data from the ESP8266, appends the data to the CSV file, and prints a summary at the end.
+ ```Data saved: 2025-04-16 18:30:48.363, Fluke Voltage: 4.17926, Bus Voltage: 4.192, Voltage Difference: -0.012739999999999974, ESP8266 Active: True
+Data saved: 2025-04-16 18:30:49.105, Fluke Voltage: 4.179288, Bus Voltage: 4.188, Voltage Difference: -0.008712000000000053, ESP8266 Active: True
+Data saved: 2025-04-16 18:30:49.847, Fluke Voltage: 4.179288, Bus Voltage: 4.188, Voltage Difference: -0.008712000000000053, ESP8266 Active: True
+Data saved: 2025-04-16 18:30:50.581, Fluke Voltage: 4.179354, Bus Voltage: 4.188, Voltage Difference: -0.00864599999999971, ESP8266 Active: True
+``` 
 
 **sensorreport.py**
 
