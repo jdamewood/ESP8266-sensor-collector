@@ -10,8 +10,8 @@
 Adafruit_INA219 ina219;
 Adafruit_MPU6050 mpu;
 
-const char* ssid = "Linksys32189"; // Replace with your Wi-Fi SSID
-const char* password = "tmp215786"; // Replace with your Wi-Fi password
+const char* ssid = "your Wi-Fi SSID"; // Replace with your Wi-Fi SSID
+const char* password = "your Wi-Fi password"; // Replace with your Wi-Fi password
 
 ESP8266WebServer server(80);
 
