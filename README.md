@@ -31,15 +31,15 @@ This script analyzes the data collected by datacollectionjsonGPIB.py from a CSV 
 
 * calculate_rms_accuracy_with_stats(csv_file): This function is the core of the script. It reads data from a CSV file, filters data based on ESP8266 activity, calculates the Root Mean Square (RMS) accuracy, extracts duration, min/max errors, calculates 3-sigma control limits (UCL/LCL), counts outliers, estimates battery capacity, and computes statistics (average, min, and max) for acceleration, rotation, and temperature data.
 
-It reads bus voltage, Fluke voltage, current, acceleration (X, Y, Z), rotation (X, Y, Z), temperature, and ESP8266 active status from the CSV.
+It reads bus voltage, Fluke voltage, current, acceleration XYZ(m/s^2), rotation XYZ (rad/s), temperature, and ESP8266 active status from the CSV.
 
 * It calculates the difference between Fluke and bus voltage.
 
 * It calculates RMS accuracy, duration, min/max error, UCL/LCL, and outlier count based on voltage differences.
 
-* It estimates battery capacity.
+* It estimates battery capacity in mAh.
 
-* It calculates and includes the average, min, and max values for acceleration, rotation, and temperature.
+* It calculates and includes the average, min, and max values for acceleration, rotation, and temperature °C.
 
 ```
 Analysis Results:
