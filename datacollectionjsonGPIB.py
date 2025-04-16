@@ -7,6 +7,9 @@ from datetime import datetime, timedelta
 import threading
 import queue  # Import the queue module
 
+#Created with Perplexity on 16Apr2025.   Will need to install py-visa and GPIB python libraries.
+
+
 # --- GPIB Configuration ---
 gpib_address = 'GPIB0::2::INSTR'  # Replace with your Fluke 8845A's GPIB address
 # --- Web Server Configuration ---
