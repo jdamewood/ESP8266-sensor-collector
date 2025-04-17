@@ -77,6 +77,7 @@ temp_max: 25.85
 
 ```
 **plot_sensor_data.py** Script Summary
+![all_plots_2x4](https://github.com/user-attachments/assets/d6b7d48d-b004-424d-bb00-703210f82b2d)
 
 This Python script `plot_sensor_data.py` analyzes sensor data from a CSV file and generates a figure containing eight subplots, arranged in a 2x4 grid. It visualizes:
 
