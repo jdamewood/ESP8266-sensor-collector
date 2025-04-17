@@ -76,3 +76,72 @@ temp_min: 25.34
 temp_max: 25.85
 
 ```
+**plot_sensor_data.py** Script Summary
+
+This Python script `plot_sensor_data.py` analyzes sensor data from a CSV file and generates a figure containing eight subplots, arranged in a 2x4 grid. It visualizes:
+
+*   **Voltage Comparison:** Bus and Fluke voltages with peak annotations and a forced annotation for Fluke voltage.
+*   **Voltage Difference:** Displays the voltage difference with RMS error and 3-sigma control limits.
+*   **Shunt/Load Voltage:** Twin axes plot showing shunt and load voltages.
+*   **Current Draw:** Plots the current with peak annotations.
+*   **Power Consumption:** Visualizes power consumption with peak markings.
+*   **Acceleration:** Displays acceleration data.
+*   **Rotation:** Shows rotation data.
+*   **Temperature:** Plots temperature with peak annotations.
+
+The script utilizes `pandas` for data loading and manipulation, `matplotlib` for plotting, and `scipy.signal` for peak detection. It includes utility functions for annotation and styling to ensure consistent and informative visualizations.
+
+**Dependencies**
+
+import pandas as pd
+import matplotlib.pyplot as plt
+from scipy.signal import find_peaks
+from matplotlib.dates import DateFormatter
+import numpy as np
+
+*   `pandas`: Used for reading the CSV file and data manipulation.
+*   `matplotlib.pyplot`: Used for creating visualizations of the data.
+*   `scipy.signal`: Used for finding the peaks of the plots for visual emphasis.
+*   `matplotlib.dates`: Used for managing the styling of date axes.
+*   `numpy`: Used for numerical operations, especially calculating RMS.
+
+**Data Loading (`df = pd.read_csv(...)`)**
+
+df = pd.read_csv('sensor_data.csv', parse_dates=['Timestamp'])
+
+**Purpose**: This section reads the sensor data from a CSV file into a `pandas` DataFrame, parsing the 'Timestamp' column as datetime objects.
+
+**Utility Functions**
+
+def annotate_plot(ax, df, time_col, data_col, peaks, color, forced_time=None, fmt=None, y_offset=5):
+"""Annotates peaks on a plot, adding a forced annotation if specified."""
+**... (implementation details)**
+
+def style_plot(ax):
+"""Applies consistent styling to a plot."""
+**... (implementation details)**
+
+def calculate_rms(data):
+"""Calculates the Root Mean Square of a data series."""
+**... (implementation details)**
+
+**Purpose:** These functions perform basic operations such as peak value annotation, plot styling, and calculating the RMS error to reduce code duplication and improve readability.
+*   `annotate_plot`:  Adds annotations for peaks, with options for forced annotations and flexible formatting.
+*   `style_plot`: Applies consistent styling (date formatting, gridlines, tick rotation) to all subplots.
+*   `calculate_rms`: Calculates the Root Mean Square (RMS) of a given data series.
+
+**Plotting Functions**
+
+**Voltage Comparison** (Forced Annotation)
+ax = axs
+ax.plot(df['Timestamp'], df['Bus Voltage (V)'], 'b-', label='Bus (V)')
+
+**Purpose:** This section contains the code for generating eight different sensor data plots. It includes data plotting, peak finding, styling, and annotation for each subplot.
+* The same plotting process is done in all 8 plots.
+**Final Formatting and Display**
+
+plt.tight_layout()
+plt.savefig('all_plots_2x4.png', dpi=300, bbox_inches='tight')
+plt.show()
+
+**Purpose**: This section ensures that all plots are properly spaced to prevent overlapping elements, saves the combined plot to a file, and displays it.
